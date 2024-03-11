@@ -58,10 +58,11 @@ const king = new Character('king', new FightingStyle(swordPower.name, swordPower
 const queen = new Character('queen', new FightingStyle(knifePower.name, knifePower.useWeapon))
 const troll = new Character('troll', new FightingStyle(axePower.name, axePower.useWeapon))
 
-console.log(king.fight())
-console.log(queen.fight())
-console.log(troll.fight())
+king.fight()
+queen.fight()
+troll.fight()
 
 queen.setFightingStyle(new FightingStyle(swordPower.name, swordPower.useWeapon))
 
-console.log(queen.fight())
+console.log('new queen action')
+queen.fight()
