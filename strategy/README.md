@@ -21,3 +21,7 @@ Strategy Interface (FightingStyle): The FightingStyle class serves as the strate
 Concrete Strategies (SwordFight, KnifeFight, AxeFight): These classes (SwordFight, KnifeFight, AxeFight) implement the FightingStyle interface. They provide different implementations of the fight method.
 
 This usage of these classes to create characters with different fighting styles and then dynamically changing the fighting style of a character (queen) at runtime effectively demonstrates the flexibility provided by the Strategy Pattern.
+
+The strategy pattern allows you to change the implementation of something used at runtime.
+
+The decorator pattern allows you augment (or add to) existing functionality with additional functionality at run time.
