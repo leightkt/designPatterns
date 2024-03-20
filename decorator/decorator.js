@@ -3,7 +3,7 @@ class Beverage {
   price
 
   getDescription() {
-    console.log(this.description)
+    return this.description
   }
 
   cost() {
@@ -30,6 +30,10 @@ class CondimentDecorator {
   cost() {
     return this.beverage.cost()
   }
+
+  getDescription() {
+    return this.beverage.getDescription()
+  }
 }
 
 class Milk extends CondimentDecorator {
@@ -39,6 +43,10 @@ class Milk extends CondimentDecorator {
 
   cost() {
     return this.beverage.cost() + 1
+  }
+
+  getDescription() {
+    return this.beverage.getDescription() + ' with Milk'
   }
 }
 
@@ -50,16 +58,20 @@ class Whip extends CondimentDecorator {
   cost() {
     return this.beverage.cost() + 1.5
   }
+
+  getDescription() {
+    return this.beverage.getDescription() + ' with Whip'
+  }
 }
 
 const houseBlend = new HouseBlend()
 const espresso = new Espresso()
 
-console.log('plain house blend', houseBlend.cost())
-console.log('plain expresso', espresso.cost())
+console.log(`${houseBlend.getDescription()} ${houseBlend.cost()}`)
+console.log(`${espresso.getDescription()} ${espresso.cost()}`)
 
 const bevie1 = new Milk(houseBlend)
 const bevie2 = new Whip(espresso)
 
-console.log('house blend with milk', bevie1.cost())
-console.log('espresso with whip', bevie2.cost())
+console.log(`${bevie1.getDescription()} ${bevie1.cost()}`)
+console.log(`${bevie2.getDescription()} ${bevie2.cost()}`)
