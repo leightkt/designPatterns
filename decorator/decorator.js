@@ -64,6 +64,20 @@ class Whip extends CondimentDecorator {
   }
 }
 
+class CaramelDrizzle extends CondimentDecorator {
+  constructor(beverage) {
+    super(beverage)
+  }
+
+  cost() {
+    return this.beverage.cost() + 2
+  }
+
+  getDescription() {
+    return this.beverage.getDescription() + ' with caramel drizzle'
+  }
+}
+
 const houseBlend = new HouseBlend()
 const espresso = new Espresso()
 
@@ -75,3 +89,7 @@ const bevie2 = new Whip(espresso)
 
 console.log(`${bevie1.getDescription()} ${bevie1.cost()}`)
 console.log(`${bevie2.getDescription()} ${bevie2.cost()}`)
+
+const bevie3 = new Whip(new CaramelDrizzle(espresso))
+
+console.log(`${bevie3.getDescription()} ${bevie3.cost()}`)
