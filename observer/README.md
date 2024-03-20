@@ -1,4 +1,4 @@
-# Observer Pattern
+# OBSERVER PATTERN
 
 The Observable Design Pattern is a behavioral design pattern that is used to implement a subscription mechanism to notify multiple objects about any changes that happen to an object's state. It is commonly used in software development, especially in applications where the state of an object needs to be monitored by other objects or components.
 
